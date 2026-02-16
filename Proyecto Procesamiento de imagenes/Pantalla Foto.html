@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Tomar Foto</title>
+
+  <link rel="stylesheet" href="PantallaFoto.css" />
+  <link rel="stylesheet" href="Fondo.css" />
+  <link rel="stylesheet" href="Formato.css" />
+</head>
+
+<body class="theme-monterrey page-foto">
+  <main class="screen">
+    <section class="content" aria-label="Pantalla para tomar foto">
+
+      <header class="topbar">
+        <button class="nav-btn" type="button" aria-label="Regresar">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M15 6 9 12l6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+        <div class="topbar__title">Neymar JR</div>
+
+        <button class="nav-btn" type="button" aria-label="Inicio">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 3.2 3.5 10.2a1 1 0 0 0-.36.77V20a1.5 1.5 0 0 0 1.5 1.5H9a1 1 0 0 0 1-1v-5h4v5a1 1 0 0 0 1 1h4.36A1.5 1.5 0 0 0 20.86 20v-9.03a1 1 0 0 0-.36-.77L12 3.2Z"
+                  fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </header>
+
+      <div class="preview-area" aria-label="Vista previa">
+        <div class="player-card" aria-label="Tarjeta del jugador">
+          <div class="player-number">10</div>
+          <div class="player-pill">Neymar JR</div>
+        </div>
+      </div>
+
+      <section class="capture-panel" aria-label="Panel de captura">
+        <button id="effectsBtn" class="effects-btn" type="button" aria-pressed="false">
+          <span class="spark" aria-hidden="true">
+
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2l1.2 5.2L18 9l-4.8 1.8L12 16l-1.2-5.2L6 9l4.8-1.8L12 2Z"
+                    fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span id="effectsLabel">Efectos OFF</span>
+        </button>
+
+        <button class="shutter" type="button" aria-label="Tomar foto">
+          <span class="shutter-ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M9 7 10.2 5.5h3.6L15 7h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h2Z"
+                    fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+              <path d="M12 17a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"
+                    fill="none" stroke="currentColor" stroke-width="1.6"/>
+            </svg>
+          </span>
+        </button>
+
+        <div class="hint">Toca para capturar foto</div>
+      </section>
+
+    </section>
+  </main>
+
+  <script>
+    const btn = document.getElementById("effectsBtn");
+    const label = document.getElementById("effectsLabel");
+
+    btn?.addEventListener("click", () => {
+      const isOn = document.body.classList.toggle("effects-on");
+      btn.setAttribute("aria-pressed", String(isOn));
+      label.textContent = isOn ? "Efectos ON" : "Efectos OFF";
+    });
+  </script>
+</body>
+</html>
