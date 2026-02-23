@@ -1,5 +1,5 @@
 /* =========================
-   TEMA MONTERREY (GLOBAL)
+   TEMA MONTERREY
 ========================= */
 .theme-monterrey{
   --m-teal: #19e6d1;
@@ -273,5 +273,59 @@
   box-shadow:
     0 0 0 3px rgba(25,230,209,0.30),
     0 0 0 6px rgba(75,50,209,0.18);
+}
+
+/* =========================
+   APP BAR
+========================= */
+.theme-monterrey .topbar{
+  border-bottom: 0;
+  border-radius: 16px;
+  padding: 0 10px;
+
+  background: linear-gradient(90deg,
+    rgba(25,230,209,0.20),
+    rgba(75,50,209,0.14),
+    rgba(216,27,44,0.16)
+  );
+
+  border: 2px solid rgba(15,23,42,0.08);
+  backdrop-filter: blur(8px);
+}
+
+.theme-monterrey .nav-btn,
+.theme-monterrey .icon-btn{
+  background: rgba(255,255,255,0.55);
+  border: 1px solid rgba(15,23,42,0.10);
+  border-radius: 12px;
+}
+
+.theme-monterrey .topbar__center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  line-height: 1;
+}
+
+.theme-monterrey .wordmark{
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+.theme-monterrey .topbar__subtitle{
+  font-weight: 900;
+  font-size: 12.5px;
+  color: rgba(15,23,42,0.70);
+}
+
+.theme-monterrey .brand-logo{
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.10);
 }
 
